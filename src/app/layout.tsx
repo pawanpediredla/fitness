@@ -1,15 +1,12 @@
-import { fonts } from "../../config/font"
-import { Providers } from "../../chakra/Providers/Providers"
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode,
-}) {
+import { ChakraProvider } from '@chakra-ui/react';
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en' className={fonts.rubik.variable}>
+    <html lang="en">
       <body>
-        <Providers>{children}</Providers>
+        <ChakraProvider>
+          {children}
+        </ChakraProvider>
       </body>
     </html>
-  )
+  );
 }
