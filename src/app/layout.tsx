@@ -1,3 +1,4 @@
+import { fonts } from "../../config/font"
 import { Providers } from "../../chakra/Providers/Providers"
 export default function RootLayout({
   children,
@@ -5,7 +6,7 @@ export default function RootLayout({
   children: React.ReactNode,
 }) {
   return (
-    <html lang='en'>
+    <html lang='en' className={fonts.rubik.variable}>
       <body>
         <Providers>{children}</Providers>
       </body>
