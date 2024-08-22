@@ -1,60 +1,67 @@
-'use client'; // Ensure this component is treated as a client-side component
+'use client'; 
 
 import React from 'react';
-import { Box, Flex, Heading, Button, Icon } from '@chakra-ui/react';
-import { FaUser } from 'react-icons/fa'; // Importing a user icon from react-icons
-
+import { Box, Flex, Heading, Button, Icon, Text } from '@chakra-ui/react';
+import { FaUser } from 'react-icons/fa';
 const LandingPage = () => {
   return (
     <Box
       minHeight="100vh"
-      bg="linear-gradient(200deg, #0066EE 60%, #9383FB 100%)" // Linear gradient background
+      bg="linear-gradient(200deg, #0066EE 60%, #9383FB 100%)" 
       position="relative"
-      p={4} // Padding for the entire Box
+      p={4} 
     >
+      
       <Flex
         align="center"
-        justify="space-evenly" // Space between text and button
-        position="relative"
-        w="full" // Full width
-        px={8} // Horizontal padding to maintain equal spacing from edges
+        justify="space-evenly"
+        gap={90} 
+        w="full" 
+        px={8} 
+        pt={4}
       >
-        <Flex
-          align="center"
-          justify="center"
+        <Heading 
+          as="h1" 
+          size="lg" 
+          color="white" 
+          fontWeight="bold" 
         >
-          <Heading 
-            as="h1" 
-            size="lg" 
-            color="white" 
-            fontWeight="bold" // Somewhat bold
-          >
-            myfitness
-          </Heading>
-        </Flex>
+          myfitness
+        </Heading>
 
-        <Flex
-          align="center"
-          justify="center"
+        <Button
+          borderRadius="3xl" 
+          size="sm" 
+          p={0}
+          minWidth="40px" 
+          minHeight="40px" 
+          backgroundColor="white" 
+          border="2px"
+          borderColor="white" 
+          color="white" 
+          _hover={{ backgroundColor: 'blue.50' }} 
+          alignItems="center"
+          justifyContent="center"
         >
-          <Button
-            borderRadius="3xl" // Rounded corners
-            size="sm" // Small size
-            p={0}
-            minWidth="40px" // Adjusted for smaller button
-            minHeight="40px" // Adjusted for smaller button
-            backgroundColor="white" // White background
-            border="2px"
-            borderColor="white" // Border color matching the button background
-            color="white" // White text color
-            _hover={{ backgroundColor: 'blue.50' }} // Light blue hover effect
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-          >
-            <Icon as={FaUser} boxSize={4} color="#1e81b0" /> {/* Adjusted icon color */}
-          </Button>
-        </Flex>
+          <Icon as={FaUser} boxSize={4} color="#1e81b0" /> 
+        </Button>
+      </Flex>
+
+   
+      <Flex
+        direction="column" 
+        align="center" 
+        mt={16} 
+        px={8} 
+      >
+        <Text 
+          fontSize="16px" 
+          fontWeight="600" 
+          color="#D8D8DC" 
+          textAlign="center" 
+        >
+          #1 nutrition tracking app
+        </Text>
       </Flex>
     </Box>
   );
